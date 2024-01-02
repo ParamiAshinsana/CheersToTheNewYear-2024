@@ -68,14 +68,6 @@
 
            animation: main-1-ani 2s ease-in 5s forwards;
        }
-       .para-div{
-           color: white;
-           font-size: 20px;
-
-           position: absolute;
-           text-align: center;
-           top: 36vw;
-       }
        /*new style*/
         *,
         *::before,
@@ -116,11 +108,11 @@
             }
         }
         @keyframes ani{
-            0%{
+            from{
                 letter-spacing: 35px;
                 filter: blur(5px);
                 opacity: 0;
-            }100%{
+            }to{
                  letter-spacing: 0;
                  filter: blur(0);
                  opacity: 1;
@@ -133,7 +125,6 @@
             position: absolute;
             text-align: center;
             top: 30vw;
-            opacity: 0;
 
             animation: ani 5s ease-in-out 3s;
         }
