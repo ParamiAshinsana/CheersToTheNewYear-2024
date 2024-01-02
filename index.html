@@ -116,11 +116,11 @@
             }
         }
         @keyframes ani{
-            from{
+            0%{
                 letter-spacing: 35px;
                 filter: blur(5px);
                 opacity: 0;
-            }to{
+            }100%{
                  letter-spacing: 0;
                  filter: blur(0);
                  opacity: 1;
@@ -133,8 +133,9 @@
             position: absolute;
             text-align: center;
             top: 30vw;
+            opacity: 0;
 
-            animation: ani 2s;
+            animation: ani 5s ease-in-out 3s;
         }
 
     </style>
