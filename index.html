@@ -37,18 +37,36 @@
            }
        }
        .main-2{
+           /*width: 100%;*/
+           /*font-size: 100px;*/
+           /*font-weight: bold;*/
+           /*background: linear-gradient(to right, red, yellow, green, blue, orange);*/
+
+           /*opacity: 0;*/
+
+           /*position: absolute;*/
+           /*text-align: center;*/
+           /*top: 22vw;*/
+
+           /*animation: main-1-ani 2s ease-in 5s forwards ;*/
+
            width: 100%;
            font-size: 100px;
            font-weight: bold;
-           color: white;
-
-           opacity: 0;
+           color: transparent; /* Make text transparent to show the gradient background */
 
            position: absolute;
            text-align: center;
-           top: 26vw;
+           top: 22vw;
 
-           animation: main-1-ani 2s ease-in 5s forwards ;
+           /* Gradient background */
+           background: linear-gradient(darkred,red,darkorange,yellow,greenyellow,lawngreen,green);
+           background-clip: text;
+           -webkit-background-clip: text; /* For older browsers */
+
+           opacity: 0;
+
+           animation: main-1-ani 2s ease-in 5s forwards;
        }
        .para-div{
            color: white;
@@ -109,7 +127,7 @@
 
 
 <!--<div class="main-1">Happy New Year</div>-->
-<!--<div class="main-2">2024</div>-->
+<h2 class="main-2">2024</h2>
 <!--<div class="para-div">-->
 <!--    Wishing you a joyous and prosperous New Year!🎊🌟-->
 <!--    May the coming year be filled with bug-free code,-->
