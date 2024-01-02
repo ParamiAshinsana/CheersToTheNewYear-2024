@@ -58,28 +58,74 @@
            text-align: center;
            top: 36vw;
        }
+       /*new style*/
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #202020;
+            font-family: cursive;
+        }
+
+        h1 {
+            /*margin-top: 2em;*/
+            font-size: 6rem;
+            text-align: center;
+        }
+
+        .color-gradient {
+            background-image: -webkit-linear-gradient(92deg, #28C76F, #0396FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-animation: hue 3.5s infinite linear;
+        }
+
+        @-webkit-keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+
+            to {
+                -webkit-filter: hue-rotate(-360deg);
+            }
+        }
+
     </style>
 </head>
 <body>
-<div class="main-1">Happy New Year</div>
-<div class="main-2">2024</div>
-<div class="para-div">
-    Wishing you a joyous and prosperous New Year!🎊🌟
-    May the coming year be filled with bug-free code,
-    seamless deployments, and innovative solutions.
-    Embrace every coding challenge as an opportunity
-    to learn and grow. May your projects compile
-    effortlessly, your algorithms be optimized, and
-    your debugging sessions be swift. Here's to a
-    year of coding success, continuous learning,
-    and achieving your software engineering dreams.
-    Cheers to a year filled with endless lines of
-    code and countless milestones!<br>
-        #HappyNewYear🎉🚀
-        #CodeOn🎉👩‍💻
-        #CodeSucces👨‍💻👩‍🎓✨
+
+
+<div class="main-1">
+    <h1><span class="color-gradient">Happy New Year</span></h1>
 </div>
 
+
+<!--<div class="main-1">Happy New Year</div>-->
+<!--<div class="main-2">2024</div>-->
+<!--<div class="para-div">-->
+<!--    Wishing you a joyous and prosperous New Year!🎊🌟-->
+<!--    May the coming year be filled with bug-free code,-->
+<!--    seamless deployments, and innovative solutions.-->
+<!--    Embrace every coding challenge as an opportunity-->
+<!--    to learn and grow. May your projects compile-->
+<!--    effortlessly, your algorithms be optimized, and-->
+<!--    your debugging sessions be swift. Here's to a-->
+<!--    year of coding success, continuous learning,-->
+<!--    and achieving your software engineering dreams.-->
+<!--    Cheers to a year filled with endless lines of-->
+<!--    code and countless milestones!<br>-->
+<!--        #HappyNewYear🎉🚀-->
+<!--        #CodeOn🎉👩‍💻-->
+<!--        #CodeSucces👨‍💻👩‍🎓✨-->
+<!--</div>-->
 
 
 <script src="jquery/lib/jquery.min.js"></script>
