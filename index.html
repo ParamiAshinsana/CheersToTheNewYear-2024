@@ -169,6 +169,15 @@
     canvas.width = window.innerWidth;
 
     var fireworks = [];
+
+    function createFirework() {
+        var firework = {
+            x: Math.random() * canvas.width,
+            y: canvas.height,
+
+        };
+        fireworks.push(firework);
+    }
 </script>
 </body>
 </html>
