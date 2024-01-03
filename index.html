@@ -185,6 +185,17 @@
     function createParticles(firework) {
         var particleCount = Math.ceil(Math.pow(firework.size, 2) * Math.PI);
 
+        for (var i = 0; i < particleCount; i++) {
+            var particle = {
+                x: firework.x,
+                y: firework.y,
+                size: Math.sqrt(firework.size),
+                color: firework.color,
+                xSpeed: Math.random() * 4 - 2,
+                ySpeed: Math.random() * -5
+            };
+            firework.particles.push(particle);
+        }
     }
 
 
