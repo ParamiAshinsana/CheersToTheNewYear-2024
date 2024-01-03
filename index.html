@@ -198,6 +198,27 @@
         }
     }
 
+    function updateFireworks() {
+        for (var i = fireworks.length - 1; i >= 0; i--) {
+            var firework = fireworks[i];
+
+            // Draw firework
+            ctx.beginPath();
+            ctx.arc(firework.x, firework.y, firework.size, 0, 2 * Math.PI);
+            ctx.fillStyle = firework.color;
+            ctx.fill();
+
+            // Update firework position
+            firework.y += -4;
+
+            // Check if firework has reached its peak
+            if (firework.y <= canvas.height * 0.1) {
+                createParticles(firework);
+                fireworks.splice(i, 1);
+            }
+        }
+    }
+
 
 </script>
 </body>
