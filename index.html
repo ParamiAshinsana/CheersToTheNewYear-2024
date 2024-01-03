@@ -8,67 +8,54 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <style>
-        body{
+        body {
             background-color: black;
             height: 100vh;
         }
-       .main-1{
-           width: 100%;
-           font-size: 120px;
-           font-weight: bold;
-           color: white;
 
-           opacity: 0;
+        .main-1 {
+            width: 100%;
+            font-size: 120px;
+            font-weight: bold;
+            color: white;
 
-           position: absolute;
-           text-align: center;
-           top: 15vw;
+            opacity: 0;
 
-           animation: main-1-ani 2s ease-in 3s forwards ;
-       }
-       @keyframes main-1-ani {
-           0% {
-               margin-top: 0;
-               opacity: 0;
-           }
-           100% {
-               margin-top: -200px;
-               opacity: 1;
-           }
-       }
-       .main-2{
-           /*width: 100%;*/
-           /*font-size: 100px;*/
-           /*font-weight: bold;*/
-           /*background: linear-gradient(to right, red, yellow, green, blue, orange);*/
+            position: absolute;
+            text-align: center;
+            top: 15vw;
+            animation: main-1-ani 2s ease-in 3s forwards;
+        }
 
-           /*opacity: 0;*/
+        @keyframes main-1-ani {
+            0% {
+                margin-top: 0;
+                opacity: 0;
+            }
+            100% {
+                margin-top: -200px;
+                opacity: 1;
+            }
+        }
 
-           /*position: absolute;*/
-           /*text-align: center;*/
-           /*top: 22vw;*/
+        .main-2 {
+            width: 100%;
+            font-size: 100px;
+            font-weight: bold;
+            color: transparent;
 
-           /*animation: main-1-ani 2s ease-in 5s forwards ;*/
+            position: absolute;
+            text-align: center;
+            top: 22vw;
 
-           width: 100%;
-           font-size: 100px;
-           font-weight: bold;
-           color: transparent; /* Make text transparent to show the gradient background */
+            background: linear-gradient(darkred, red, darkorange, yellow, greenyellow, lawngreen, green);
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            animation: main-1-ani 2s ease-in 5s forwards;
+        }
 
-           position: absolute;
-           text-align: center;
-           top: 22vw;
-
-           /* Gradient background */
-           background: linear-gradient(darkred,red,darkorange,yellow,greenyellow,lawngreen,green);
-           background-clip: text ;
-           -webkit-background-clip: text; /* For older browsers */
-
-           opacity: 0;
-
-           animation: main-1-ani 2s ease-in 5s forwards;
-       }
-       /*new style*/
+        /*new style*/
         *,
         *::before,
         *::after {
@@ -86,7 +73,6 @@
         }
 
         h1 {
-            /*margin-top: 2em;*/
             font-size: 6rem;
             text-align: center;
         }
@@ -102,21 +88,21 @@
             from {
                 -webkit-filter: hue-rotate(0deg);
             }
-
             to {
                 -webkit-filter: hue-rotate(-360deg);
             }
         }
+
         .para-div {
             color: white;
             font-size: 25px;
             position: absolute;
             text-align: center;
-            top: 30vw;
+            top: 26vw;
             visibility: hidden;
-
             animation: para-div-ani 5s ease-in-out 3s forwards;
         }
+
         @keyframes para-div-ani {
             0% {
                 letter-spacing: 35px;
@@ -131,7 +117,6 @@
                 visibility: visible;
             }
         }
-
         /*Fireworks*/
         canvas {
             position: fixed;
@@ -139,13 +124,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
 
-<canvas id="fireworks-canvas"></canvas>
+<canvas id="Canvas"></canvas>
 <div class="main-1">
     <h1><span class="color-gradient">Happy New Year</span></h1>
 </div>
@@ -165,17 +150,18 @@
             and achieving your software engineering dreams.<br>
             Cheers to a year filled with endless lines of
             code and countless milestones!<br>
-                #HappyNewYear🎉🚀
-                #CodeOn🎉👩‍💻
-                #CodeSucces👨‍💻👩‍🎓✨
+            #HappyNewYear🎉🚀
+            #CodeOn🎉👩‍💻
+            #CodeSucces👨‍💻👩‍🎓✨
         </div>
     </div>
 </div>
 
-
 <script src="jquery/lib/jquery.min.js"></script>
 <script>
-    document.getElementsByTagName(".para-div")[0].style.fontSize = "6vw";
+    document.querySelector(".para-div").style.fontSize = "1.8vw";
+
+    // Fireworks-js
 </script>
 </body>
 </html>
