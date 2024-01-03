@@ -234,6 +234,10 @@
                 particle.x += particle.xSpeed;
                 particle.y += particle.ySpeed;
 
+                if (particle.y > canvas.height || particle.size <= 0) {
+                    particles.splice(j, 1);
+                }
+
             }
         }
     }
