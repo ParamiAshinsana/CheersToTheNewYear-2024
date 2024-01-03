@@ -226,6 +226,11 @@
             for (var j = particles.length - 1; j >= 0; j--) {
                 var particle = particles[j];
 
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.size, 0, 2 * Math.PI);
+                ctx.fillStyle = particle.color;
+                ctx.fill()
+
             }
         }
     }
